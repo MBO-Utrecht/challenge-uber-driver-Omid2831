@@ -51,7 +51,7 @@ public class CarScript : MonoBehaviour
 
 
         Debug.Log("Collided with" + col.gameObject.name);
-        if (other.gameObject.CompareTag("Package"))
+        if (col.gameObject.CompareTag("Package"))
         {
             Debug.Log("Package touched!");
             if (hashPackage == false)
@@ -62,7 +62,7 @@ public class CarScript : MonoBehaviour
                 hashPackage = true;
 
             }
-            if(other.gameObject.CompareTag("Customer")){
+            if(col.gameObject.CompareTag("Customer")){
                 Debug.Log("Customer touched!");
                  if (hashPackage == true)
             {
